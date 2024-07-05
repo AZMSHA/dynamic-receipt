@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/notNeeded.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <title>Receipt</title>
+  </head>
+  <body
+    class="d-flex flex-column justify-content-center align-items-center min-vh-100 pb-5 pt-5"
+  >
+    <!------------------------------------------------- CUSTOM CSS ------------------------------------------------->
+    <style>
+      /** for development purposes only / not for live site **/
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      body {
+        font-family: "Roboto";
+        background-color: black;
+      }
+
+      /** For live site **/
+      #generated-receipt {
+        /* background-color: #f9f9f9; */
+        --receipt-header-image-height: 6rem;
+        --theme-color: #f9f9f9;
+        --font-color: black;
+        --accent-color: #fe712d;
+        --border-color: rgb(53, 53, 53);
+        padding: calc(8rem - var(--receipt-header-image-height)) 8rem 8rem;
+        background-color: var(--theme-color);
+        color: var(--border-color);
+        accent-color: var(--accent-color);
+        caret-color: var(--accent-color);
+      }
+
+      #generated-receipt img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      #generated-receipt .receipt-header-image {
+        height: var(--receipt-header-image-height);
+      }
+
+      .bs-grid-table-custom {
+        border: 2px solid var(--border-color);
+        line-height: 1em;
+        font-size: 0.7rem;
+      }
+
+      .bs-grid-table-custom h1,
+      .bs-grid-table-custom h2,
+      .bs-grid-table-custom h3,
+      .bs-grid-table-custom h4,
+      .bs-grid-table-custom h5,
+      .bs-grid-table-custom h6,
+      .bs-grid-table-custom p {
+        font-size: inherit;
+        margin: 0px;
+      }
+
+      .bs-grid-table-custom .fs-large {
+        font-size: 1.55rem;
+        line-height: 1em;
+      }
+
+      .bs-grid-table-custom .fs-medium {
+        font-size: 1rem;
+        line-height: 1em;
+      }
+      .bs-grid-table-custom .highlight {
+        color: var(--font-color);
+        font-weight: 700;
+      }
+
+      @media only screen and (min-width: 992px) {
+        .bs-grid-table-custom .col-lg-auto {
+          flex: 1 0 0%;
+          width: initial;
+        }
+      }
+
+      .bs-grid-table-custom [class^="col"]:not(:last-child) {
+        border-right: 2px solid var(--border-color);
+      }
+
+      @media only screen and (max-width: 991px) {
+        .bs-grid-table-custom > [class^="col"]:not(:first-child) {
+          border-top: 2px solid var(--border-color);
+        }
+      }
+
+      .bs-grid-table-custom .row.g-0:not(:last-child) {
+        border-bottom: 2px solid var(--border-color);
+      }
+
+      .bs-grid-table-custom .table-header {
+        display: flex;
+        line-height: 1em;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        background-color: var(--accent-color);
+        border-bottom: 2px solid var(--border-color);
+        color: var(--theme-color);
+        min-height: 1.5rem;
+      }
+
+      .bs-grid-table-custom .bulletpoint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        flex-shrink: 0;
+        height: 100%;
+        background-color: var(--font-color);
+        color: var(--theme-color);
+      }
+
+      .bs-grid-table-custom .table-header-text {
+        line-height: 0.8em;
+        font-weight: 700;
+        margin: 0px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding-inline: 0.25rem;
+      }
+
+      .bs-grid-table-custom .table-header.vertical {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        width: 1.5rem;
+        border-right: 2px solid var(--border-color);
+        border-bottom: none;
+        height: initial;
+      }
+
+      .bs-grid-table-custom .table-header.vertical .bulletpoint {
+        height: 1.5rem;
+      }
+
+      .bs-grid-table-custom .table-header.vertical .table-header-text {
+        letter-spacing: -3px;
+        word-spacing: -6px;
+      }
+
+      .table-cell {
+        padding: 0.25rem;
+      }
+    </style>
+    <!------------------------------------------------- CUSTOM CSS ------------------------------------------------->
+
+    <main id="generated-receipt" class="container">
+      <div class="receipt-header row">
+        <div
+          class="col-12 d-flex align-items-center justify-content-between mb-3"
+        >
+          <img
+            class="receipt-header-image"
+            src="/assets/dummy images/lazib-moto-dark.png"
+            alt=""
+          />
+          <img
+            class="receipt-header-image"
+            src="/assets/dummy images/lazib-moto-dark.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <section class="bs-grid-table-custom row g-0">
+        <div class="col-12 col-lg-auto">
+          <div class="row g-0">
+            <div class="col">
+              <div class="row g-0">
+                <div class="d-flex">
+                  <span class="bulletpoint">1</span>
+                  <div class="table-cell">
+                    <span class="text-uppercase">account name</span>
+                    <h6 class="highlight text-capitalize">Select Courier</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <header class="table-header vertical">
+                  <h6 class="table-header-text">Shipper</h6>
+                </header>
+                <div class="col">
+                  <div class="table-cell">
+                    <p>
+                      <span>HIKE CORP</span><br />
+                      <span>MODEL TOWN</span><br />
+                      <span>STREET 2</span><br />
+                      <span>SIALKOT</span><br />
+                      <span>PUNJAB, 51310</span><br />
+                      <span>PAKISTAN</span><br />
+                    </p>
+                    <br />
+                    <p>
+                      <span>HIKE CORP</span><br />
+                      <span>00923025490127</span><br />
+                      <span>CNIC/NTN: 59182495</span><br />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <header class="table-header">
+              <span class="bulletpoint">3</span>
+              <h6 class="table-header-text">
+                Sender's Authorization And Signature
+              </h6>
+            </header>
+            <div class="col">
+              <div class="table-cell">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora voluptate architecto, ullam ab cumque nisi obcaecati
+                  saepe mollitia
+                </p>
+                <br />
+                <div class="row g-0">
+                  <div class="col border-0">
+                    <p>SENDER'S SIGNATURE:</p>
+                    <div style="height: 50px" class="Signature Area"></div>
+                  </div>
+                  <div class="col">
+                    <p>DATE: <span>03 Jan 2024, 24:00:00</span></p>
+                    <p>Received by:</p>
+                    <div style="height: 30px" class="Signature Area"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <header class="table-header">
+              <span class="bulletpoint">4</span>
+              <h6 class="table-header-text">Proof of Delivery (POD)</h6>
+            </header>
+            <div class="col">
+              <div class="table-cell">
+                <div class="row g-0 border-0">
+                  <div class="col border-0">
+                    <p>RECEIVER'S SIGNATURE:</p>
+                    <div style="height: 50px" class="Signature Area"></div>
+                  </div>
+                  <div class="col">
+                    <p>DATE: <span>03 Jan 2024</span></p>
+                    <br />
+                    <p>TIME: <span>24:00:00</span></p>
+                  </div>
+                </div>
+                <div class="row g-0">
+                  <div class="col border-0">
+                    <p>PRINT NAME (Capital letters):</p>
+                    <div style="height: 50px" class="Signature Area"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-auto">
+          <div class="row g-0">
+            <div class="col-3">
+              <div
+                class="table-cell fs-large d-flex align-items-center justify-content-center highlight"
+              >
+                SKT
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="table-cell fs-large d-flex align-items-center justify-content-center highlight"
+              >
+                000670279462
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <header class="table-header vertical">
+              <span class="bulletpoint">2</span>
+              <h6 class="table-header-text">consignee</h6>
+            </header>
+            <div class="col">
+              <div class="table-cell">
+                <p>
+                  <span>JASON JHONSON</span><br />
+                  <span>6 GROVE ROAD</span><br />
+                </p>
+                <br />
+                <p>
+                  <span>LONDON</span><br />
+                  <span>ENGLAND</span><br />
+                  <span>UNITED KINGDOM</span><br />
+                </p>
+                <br />
+                <p>
+                  <span>Attn. JASON JHONSON</span><br />
+                  <span>009230254907</span><br />
+                </p>
+                <br />
+                <p>
+                  <span>VAT: 59182495</span><br />
+                  <span>EORI</span><br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col">
+              <div
+                class="table-cell fs-large d-flex flex-column h-100 align-items-center justify-content-center highlight"
+              >
+                ** DAP **
+              </div>
+            </div>
+            <div class="col">
+              <div class="table-cell">
+                <p class="text-uppercase">
+                  declared value for customs and currency
+                </p>
+                <div class="highlight">70.00 USD</div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col">
+              <div class="table-cell">
+                <img src="/assets/dummy images/dummy_barcode.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="row g-0">
+            <header class="table-header">
+              <h6 class="table-header-text">Customer Reference</h6>
+            </header>
+            <div class="col">
+              <div class="table-cell"><p>Select Courier</p></div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <header class="table-header">
+              <h6 class="table-header-text">Alternate Reference</h6>
+            </header>
+            <div class="col">
+              <div class="table-cell"><p></p></div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <header class="table-header">
+              <span class="bulletpoint">5</span>
+              <h6 class="table-header-text">Service Type</h6>
+            </header>
+            <div class="col">
+              <div class="row g-0">
+                <div class="table-cell">
+                  <p class="highlight">skyNET Export Non Documents</p>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="table-cell">
+                  <span class="highlight text-uppercase">IMPORTANT</span>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Facere facilis vitae, veniam officiis nesciunt
+                  </p>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="table-cell">
+                  <div>
+                    <span class="text-uppercase"
+                      >full description of contents:</span
+                    >
+                    <p class="text-uppercase">1 pcs go cart suit cotton</p>
+                  </div>
+                  <div>
+                    <span class="text-uppercase">special instructions:</span>
+                    <p>Samples</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <header class="table-header">
+              <span class="bulletpoint">6</span>
+              <h6 class="table-header-text">size & weight</h6>
+            </header>
+            <div class="col">
+              <div class="row g-0">
+                <div class="table-cell">
+                  <p>NO. OF PIECES: <span class="highlight">1</span></p>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col">
+                  <div class="table-cell">
+                    <p
+                      class="d-flex align-items-center justify-content-center text-uppercase fs-medium highlight"
+                    >
+                      weight
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="table-cell">
+                    <p
+                      class="d-flex align-items-center justify-content-center text-uppercase fs-medium highlight"
+                    >
+                      1.56 kgs
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="table-cell">
+                  <span class="text-uppercase"> dimensions in cm (LXWXH):</span>
+                  <p class="text-uppercase text-center">1.00 X 1.00 X 1.00</p>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="table-cell">
+                  <span class="text-uppercase">
+                    volumetric/ charged weight:</span
+                  >
+                  <p class="text-uppercase highlight">00.00 kgs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
