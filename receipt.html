@@ -29,12 +29,31 @@
         --accent-color: #fe712d;
         --border-color: rgb(53, 53, 53);
         --border-width: 2px;
-        --border-style: dotted;
+        --border-style: solid;
         padding: calc(8rem - var(--receipt-header-image-height)) 8rem 8rem;
         background-color: var(--theme-color);
         color: var(--border-color);
         accent-color: var(--accent-color);
         caret-color: var(--accent-color);
+      }
+
+      @media only screen and (max-width: 1199px) {
+        #generated-receipt {
+          padding: calc(9rem - var(--receipt-header-image-height)) 3rem 3rem;
+        }
+      }
+
+      @media only screen and (max-width: 991px) {
+        #generated-receipt {
+          padding: calc(7rem - var(--receipt-header-image-height)) 1rem 1rem;
+        }
+      }
+
+      @media only screen and (max-width: 575px) {
+        #generated-receipt {
+          padding: calc(6.5rem - var(--receipt-header-image-height)) 0.5rem
+            0.5rem;
+        }
       }
 
       #generated-receipt img {
