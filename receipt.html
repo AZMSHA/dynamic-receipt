@@ -109,18 +109,18 @@
 
       /* Small (sm) */
       @media (min-width: 576px) {
-        /* Wrapping Column border rules for screens 576px and above */
-        .bs-grid-table-custom .col-12[class*="col-sm"] {
+        .bs-grid-table-custom .col-12[class*="col-sm"]:not(:last-child) {
           border-top: none;
           border-bottom: none;
           border-right: var(--border-width) var(--border-style)
             var(--border-color) !important;
         }
+        /* Wrapping Column border rules for screens 576px and above */
       }
 
       /* Medium (md) */
       @media (min-width: 768px) {
-        .bs-grid-table-custom .col-12[class*="col-md"] {
+        .bs-grid-table-custom .col-12[class*="col-md"]:not(:last-child) {
           border-top: none;
           border-bottom: none;
           border-right: var(--border-width) var(--border-style)
@@ -131,7 +131,7 @@
 
       /* Large (lg) */
       @media (min-width: 992px) {
-        .bs-grid-table-custom .col-12[class*="col-lg"] {
+        .bs-grid-table-custom .col-12[class*="col-lg"]:not(:last-child) {
           border-top: none;
           border-bottom: none;
           border-right: var(--border-width) var(--border-style)
@@ -142,7 +142,7 @@
 
       /* Extra Large (xl) */
       @media (min-width: 1200px) {
-        .bs-grid-table-custom .col-12[class*="col-xl"] {
+        .bs-grid-table-custom .col-12[class*="col-xl"]:not(:last-child) {
           border-top: none;
           border-bottom: none;
           border-right: var(--border-width) var(--border-style)
@@ -153,7 +153,7 @@
 
       /* Extra Extra Large (xxl) */
       @media (min-width: 1400px) {
-        .bs-grid-table-custom .col-12[class*="col-xxl"] {
+        .bs-grid-table-custom .col-12[class*="col-xxl"]:not(:last-child) {
           border-top: none;
           border-bottom: none;
           border-right: var(--border-width) var(--border-style)
