@@ -1,0 +1,213 @@
+#generated-receipt {
+  /* background-color: #f9f9f9; */
+  --receipt-header-image-height: 6rem;
+  --theme-color: #f9f9f9;
+  --font-color: black;
+  --accent-color: #fe712d;
+  --border-color: rgb(53, 53, 53);
+  --border-width: 2px;
+  --border-style: solid;
+  padding: calc(8rem - var(--receipt-header-image-height)) 8rem 8rem;
+  background-color: var(--theme-color);
+  color: var(--border-color);
+  accent-color: var(--accent-color);
+  caret-color: var(--accent-color);
+}
+
+@media only screen and (max-width: 1199px) {
+  #generated-receipt {
+    padding: calc(9rem - var(--receipt-header-image-height)) 3rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #generated-receipt {
+    padding: calc(7rem - var(--receipt-header-image-height)) 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #generated-receipt {
+    padding: calc(6.5rem - var(--receipt-header-image-height)) 0.5rem 0.5rem;
+  }
+}
+
+#generated-receipt img {
+  max-width: 100%;
+  height: auto;
+}
+
+#generated-receipt .receipt-header-image {
+  height: var(--receipt-header-image-height);
+}
+
+.bs-grid-table-custom {
+  border: var(--border-width) var(--border-style) var(--border-color);
+  line-height: 1em;
+  font-size: 0.7rem;
+}
+
+.bs-grid-table-custom h1,
+.bs-grid-table-custom h2,
+.bs-grid-table-custom h3,
+.bs-grid-table-custom h4,
+.bs-grid-table-custom h5,
+.bs-grid-table-custom h6,
+.bs-grid-table-custom p {
+  font-size: inherit;
+  margin: 0px;
+}
+
+.bs-grid-table-custom .fs-large {
+  font-size: 1.55rem;
+  line-height: 1em;
+}
+
+.bs-grid-table-custom .fs-medium {
+  font-size: 1rem;
+  line-height: 1em;
+}
+.bs-grid-table-custom .highlight {
+  color: var(--font-color);
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 992px) {
+  .bs-grid-table-custom .col-lg-auto {
+    flex: 1 0 0%;
+    width: auto;
+  }
+}
+
+.bs-grid-table-custom .col-12 {
+  border-right: none !important;
+}
+
+.bs-grid-table-custom .col-12:not(:last-child) {
+  border-top: var(--border-width) var(--border-style) var(--border-color);
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.bs-grid-table-custom .col-12:first-child {
+  border-top: none;
+}
+
+.bs-grid-table-custom .col-12 + .col-12 {
+  border-top: none;
+}
+
+.bs-grid-table-custom [class^="col"]:not(:last-child) {
+  border-right: var(--border-width) var(--border-style) var(--border-color);
+}
+
+/* Small (sm) */
+@media (min-width: 576px) {
+  .bs-grid-table-custom .col-12[class*="col-sm"]:not(:last-child) {
+    border-top: none;
+    border-bottom: none;
+    border-right: var(--border-width) var(--border-style) var(--border-color) !important;
+  }
+  /* Wrapping Column border rules for screens 576px and above */
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+  .bs-grid-table-custom .col-12[class*="col-md"]:not(:last-child) {
+    border-top: none;
+    border-bottom: none;
+    border-right: var(--border-width) var(--border-style) var(--border-color) !important;
+  }
+  /* Wrapping Column border rules for screens 768px and above */
+}
+
+/* Large (lg) */
+@media (min-width: 992px) {
+  .bs-grid-table-custom .col-12[class*="col-lg"]:not(:last-child) {
+    border-top: none;
+    border-bottom: none;
+    border-right: var(--border-width) var(--border-style) var(--border-color) !important;
+  }
+  /* Wrapping Column border rules for screens 992px and above */
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1200px) {
+  .bs-grid-table-custom .col-12[class*="col-xl"]:not(:last-child) {
+    border-top: none;
+    border-bottom: none;
+    border-right: var(--border-width) var(--border-style) var(--border-color) !important;
+  }
+  /* Wrapping Column border rules for screens 1200px and above */
+}
+
+/* Extra Extra Large (xxl) */
+@media (min-width: 1400px) {
+  .bs-grid-table-custom .col-12[class*="col-xxl"]:not(:last-child) {
+    border-top: none;
+    border-bottom: none;
+    border-right: var(--border-width) var(--border-style) var(--border-color) !important;
+  }
+  /* Wrapping Column border rules for screens 1400px and above */
+}
+
+.bs-grid-table-custom .row.g-0:not(:last-child) {
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.bs-grid-table-custom .table-header {
+  display: flex;
+  line-height: 1em;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background-color: var(--accent-color);
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
+  color: var(--theme-color);
+  min-height: 1.5rem;
+}
+
+.bs-grid-table-custom .bulletpoint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  flex-shrink: 0;
+  height: 100%;
+  background-color: var(--font-color);
+  color: var(--theme-color);
+}
+
+.bs-grid-table-custom .table-header-text {
+  line-height: 0.8em;
+  font-weight: 700;
+  margin: 0px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-inline: 0.25rem;
+}
+
+.bs-grid-table-custom .table-header.vertical {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  width: 1.5rem;
+  border-right: var(--border-width) var(--border-style) var(--border-color);
+  border-bottom: none;
+  height: initial;
+}
+
+.bs-grid-table-custom .table-header.vertical .bulletpoint {
+  height: 1.5rem;
+}
+
+.bs-grid-table-custom .table-header.vertical .table-header-text {
+  letter-spacing: -3px;
+  word-spacing: -6px;
+}
+
+.table-cell {
+  padding: 0.25rem;
+}
